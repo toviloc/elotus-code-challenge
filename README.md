@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+## Installation
+
+## Usage
+
+## Folder Structure
+
+## Feature
+
+## Contact
+
+If you have any questions or suggestions, please contact:
+
+- Name: Loc Tong (Luke)
+- Email: loc.tongvinh@gmail.com
+- +84 773 192 787
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
