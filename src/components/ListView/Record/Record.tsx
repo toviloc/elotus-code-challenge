@@ -4,7 +4,6 @@ import Movie from '../../../interfaces/Movie'
 
 function Record(props: { movie: Movie }) {
     const { movie: { title, poster_path, release_date, overview } } = props
-
     return (
         <div className="record">
             <div className='imgContent'>

@@ -5,13 +5,14 @@
   width: 40%;
   left: 50%;
   height: auto;
-  max-height: 650px;
+  max-height: 640px;
   background-color: white;
   border: 1px solid #ddd;
   box-shadow: 0.2px 0.6px 0.5px 0.5px;
   z-index: 1;
   transform: translate(-50%, -50%);
   overflow-y: auto;
+  border-radius: 8px;
   .modalContent {
     display: flex;
     flex-direction: column;

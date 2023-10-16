@@ -1,25 +1,28 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(199, 252, 227);
   align-items: center;
   height: 40px;
-  padding: 12px;
+  padding: 8px;
 }
 
 .tabs {
   display: flex;
-  gap: 10px;
   height: 100%;
-
+  justify-content: flex-end;
   .tab {
     display: flex;
-    // padding: 10px;
     align-items: center;
-    justify-content: center;
+    padding: 0 8px;
     height: 100%;
+    border-right: 1px solid rgb(199, 252, 227);
+    border-left: 1px solid rgb(199, 252, 227);
     &:hover {
       cursor: pointer;
+      background-color: rgb(229, 240, 250);
+    }
+    &:active {
       background-color: rgb(229, 240, 250);
     }
   }
@@ -32,7 +35,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  width: 96px;
+  width: 256px;
   .inputSearch {
     padding: 12px;
     background-color: transparent;
@@ -53,6 +56,22 @@
     }
   }
 }
+
+.switchBtn {
+  border-radius: 8px solid rgb(109, 105, 105);
+  background-color: whitesmoke;
+  .switchIcon {
+    padding: 12px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(229, 240, 250);
+  }
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -60,8 +79,22 @@
   gap: 12px;
 }
 
-@media (min-width: 640px) {
+.title-h1 {
+  font-weight: 600;
+  font-size: 32px;
+  .movies {
+    color: slategray;
+  }
+  .reviewer {
+    color: aquamarine;
+    &:hover {
+      font-style: italic;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
   .search {
-    width: 256px;
+    width: 96px;
   }
 }

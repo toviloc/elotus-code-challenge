@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //   border: 1px solid #ccc;
-  //   border-radius: 5px;
   padding: 16px;
   margin: 16px;
   align-items: baseline;
-  width: 200px;
+  width: 174px;
+  gap: 8px;
   &:hover {
     cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(222, 250, 250);
   }
 }

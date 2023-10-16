@@ -1,5 +1,6 @@
 import axios from 'axios';
 import MovieList from '../interfaces/MovieList';
+import Movie from '../interfaces/Movie';
 
 const accessToken = process.env.REACT_APP_ACCESS_KEY_TOKEN
 
@@ -12,7 +13,7 @@ export const getNowPlayingMovies = async (params: { language?: string, page?: nu
       params,
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer  ${accessToken}`
+        Authorization: `Bearer ${accessToken}`
       }
     };
     const response = await axios.request(options);
@@ -40,7 +41,7 @@ export const getTopRateMovies = async (params: { language?: string, page?: numbe
       params,
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer  ${accessToken}`
+        Authorization: `Bearer ${accessToken}`
       }
     };
     const response = await axios.request(options);
@@ -68,7 +69,7 @@ export const searchMovies = async (params: { query: string }) => {
       params,
       headers: {
         accept: 'application/json',
-        // Authorization: `Bearer  ${accessToken}`
+        Authorization: `Bearer ${accessToken}`
       }
     };
     const response = await axios.request(options);
@@ -88,16 +89,30 @@ export const searchMovies = async (params: { query: string }) => {
   }
 }
 
-// export const getGenresMovies = async (params: { language?: string }) => {
-//   const options = {
-//     method: 'GET',
-//     url: 'https://api.themoviedb.org/3/genre/movie/list',
-//     params,
-//     headers: {
-//       accept: 'application/json',
-//       Authorization: `Bearer  ${accessToken}`
-//     }
-//   };
-//   const response = await axios.request(options);
-//   return response.data as MovieList;
-// }
+export const getMovieDetails = async (movieId: number) => {
+  try {
+    const options = {
+      method: 'GET',
+      url: `https://api.themoviedb.org/3/movie/${movieId}`,
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${accessToken}`
+      }
+    };
+    const response = await axios.request(options);
+    return {
+      error: false,
+      status: 'success',
+      body: response.data as Movie,
+      message: ''
+    }
+  } catch (error) {
+    return {
+      error: true,
+      status: "fail",
+      body: {} as Movie,
+      message: "Failed to retrieve data from the Movie API"
+    }
+  }
+
+}

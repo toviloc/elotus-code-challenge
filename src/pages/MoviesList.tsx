@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { getNowPlayingMovies, getTopRateMovies, searchMovies } from '../services/apiService';
+import { getMovieDetails, getNowPlayingMovies, getTopRateMovies, searchMovies } from '../services/apiService';
 import Movie from '../interfaces/Movie';
 import Header from '../components/Header/Header';
-import '../styles/MoviesList.scss'
 import Loading from '../components/Loading/Loading';
 import Snackbar from '../components/Snackbar/Snackbar';
 import GridView from '../components/GridView/GridView';
@@ -18,6 +17,18 @@ function MoviesList() {
   const [errorMessage, setErrorMessage] = useState('')
   const [isGridView, setIsGridView] = useState(true)
 
+  const fecthMovieDetails = async (movieId: number) => {
+    setIsLoading(true)
+    const res = await getMovieDetails(movieId);
+    if (!res.error) {
+      setMovieDetail(res.body)
+    } else {
+      setIsError(true)
+      setErrorMessage(res.message)
+    }
+    setIsLoading(false)
+  }
+
   const fetchNowPlayingMovies = async () => {
     setIsLoading(true)
     const res = await getNowPlayingMovies({});
@@ -29,7 +40,6 @@ function MoviesList() {
     }
     setIsLoading(false)
   }
-  // console.log(isLoading)
 
   const fetchTopRateMovies = async () => {
     setIsLoading(true)
@@ -47,7 +57,12 @@ function MoviesList() {
     setIsLoading(true)
     const res = await searchMovies({ query });
     if (!res.error) {
-      setMoviesList(res.body.results);
+      if (res.body.total_results === 0) {
+        setIsError(true)
+        setErrorMessage("The Movies not found")
+      } else {
+        setMoviesList(res.body.results);
+      }
     } else {
       setIsError(true)
       setErrorMessage(res.message)
@@ -57,7 +72,7 @@ function MoviesList() {
 
   const handleOnClick = (movie: Movie) => {
     setIsShowDetail(true);
-    setMovieDetail(movie);
+    fecthMovieDetails(movie.id)
   }
 
   const handleCloseSnackbar = () => {

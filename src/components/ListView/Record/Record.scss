@@ -1,13 +1,18 @@
 .record {
   display: flex;
   width: 60%;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
-  .imgContent {
+  &:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(222, 250, 250);
   }
+  //   .imgContent {
+  //   }
 
-  .recordContent {
-  }
+  //   .recordContent {
+  //   }
   .ellipsis {
     overflow: hidden;
     height: 60px;
@@ -76,4 +81,7 @@
       white
     );
   }
+}
+
+@media screen and (max-width: 768px) {
 }

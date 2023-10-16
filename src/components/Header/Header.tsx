@@ -17,9 +17,13 @@ function Header(props: { isGridView: boolean, getNowPlayingMovies: Function, get
         <div className='tab' onClick={() => getNowPlayingMovies()}>Now Playing</div>
         <div className='tab' onClick={() => getTopRateMovies()}>Top Rate</div>
       </div>
+      <div className='title-h1'>
+        <span className="movies">Movies </span>
+        <span className="reviewer">Review</span>
+      </div>
       <div className='btn'>
         <div className='switchBtn'>
-          <button onClick={() => toggleView(!isGridView)}><FaList /></button>
+          <button className='switchIcon' onClick={() => toggleView(!isGridView)}><FaList /></button>
         </div>
         <div className='search'>
           <div>
