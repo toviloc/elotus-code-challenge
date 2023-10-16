@@ -1,7 +1,5 @@
 # The Movies Reviewer App - Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Description
 
 ## Installation
@@ -10,7 +8,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Folder Structure
-
+.
+├── build                   # Compiled files (alternatively `dist`)
+├── docs                    # Documentation files (alternatively `doc`)
+├── src                     # Source files (alternatively `lib` or `app`)
+├── test                    # Automated tests (alternatively `spec` or `tests`)
+├── tools                   # Tools and utilities
+├── LICENSE
+└── README.md
 
 ## Feature
 
