@@ -30,33 +30,33 @@ Below is the directory structure of the project:
 
 - `src/`: This directory contains the main source code of the project.
   - `components/`: Contains reusable components used throughout the application.
-    - `GridView/`:
-      - `Card/`:
+    - `GridView/`: the component displays movies as a grid
+      - `Card/`: Show each movie in a cell format
         - `Card.tsx` :
         - `Card.scss` :
       - `GridView.tsx` :
       - `GridView.scss` :
-    - `Header/`:
+    - `Header/`: 
       - `Header.tsx` :
       - `Header.scss` :
-    - `ListView/`:
-      - `Record/` :
+    - `ListView/`: the component displays movies as a list
+      - `Record/`: Show each movie in a line-by-line format
         - `Record.tsx` :
         - `Record.scss` :
       - `ListView.tsx`:
       - `ListView.scss`:
-    - `Loading/`:
+    - `Loading/`: the component displays a loading page during an API running 
       - `Loading.tsx` :
       - `Loading.scss` :
-    - `Modal/`:
+    - `Modal/`: the component displays movie details after users have clicked on the cell
       - `Modal.tsx` :
       - `Modal.scss` :
-    - `Snackbar/`:
+    - `Snackbar/`: 
       - `Snackbar.tsx` :
       - `Snackbar.scss` :
   - `pages/`: Contains individual pages or views.
     - `MoviesList.tsx`:  
-  - `styles/`: Stores stylesheets, including CSS and SCSS files.
+  - `styles/`: Stores stylesheets, including SCSS files.
     - `index.scss`:
   - `interfaces/`:
     - `Movies.tsx`:
