@@ -1,7 +1,9 @@
 # The Movies Reviewer App - Code Challenge
 
 ## Description
+
 The Movies is a movies app using the https://developers.themoviedb.org/3
+
 This app can help users find the Now Playing and Top Rate movies, also search movies as well  
 
 ## Installation
