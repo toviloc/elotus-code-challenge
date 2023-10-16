@@ -59,7 +59,7 @@ function MoviesList() {
     if (!res.error) {
       if (res.body.total_results === 0) {
         setIsError(true)
-        setErrorMessage("The Movies not found")
+        setErrorMessage("The movies are not found")
       } else {
         setMoviesList(res.body.results);
       }
