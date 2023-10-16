@@ -32,37 +32,37 @@ Below is the directory structure of the project:
   - `components/`: Contains reusable components used throughout the application.
     - `GridView/`: the component displays movies as a grid
       - `Card/`: Show each movie in a cell format
-        - `Card.tsx` :
-        - `Card.scss` :
-      - `GridView.tsx` :
-      - `GridView.scss` :
+        - `Card.tsx`
+        - `Card.scss`
+      - `GridView.tsx`
+      - `GridView.scss`
     - `Header/`: 
-      - `Header.tsx` :
-      - `Header.scss` :
+      - `Header.tsx`
+      - `Header.scss`
     - `ListView/`: the component displays movies as a list
       - `Record/`: Show each movie in a line-by-line format
-        - `Record.tsx` :
-        - `Record.scss` :
-      - `ListView.tsx`:
-      - `ListView.scss`:
+        - `Record.tsx`
+        - `Record.scss`
+      - `ListView.tsx`
+      - `ListView.scss`
     - `Loading/`: the component displays a loading page during an API running 
-      - `Loading.tsx` :
-      - `Loading.scss` :
+      - `Loading.tsx`
+      - `Loading.scss`
     - `Modal/`: the component displays movie details after users have clicked on the cell
-      - `Modal.tsx` :
-      - `Modal.scss` :
-    - `Snackbar/`: 
-      - `Snackbar.tsx` :
-      - `Snackbar.scss` :
+      - `Modal.tsx`
+      - `Modal.scss`
+    - `Snackbar/`: Show the error message
+      - `Snackbar.tsx`
+      - `Snackbar.scss` 
   - `pages/`: Contains individual pages or views.
-    - `MoviesList.tsx`:  
+    - `MoviesList.tsx`
   - `styles/`: Stores stylesheets, including SCSS files.
-    - `index.scss`:
+    - `index.scss`
   - `interfaces/`:
-    - `Movies.tsx`:
-    - `MoviesList.tsx`:
-  - `services/`:
-    - `apiService.tsx`: Using axios to get and fetch data via api
+    - `Movies.tsx`
+    - `MoviesList.tsx`
+  - `services/`: Using Axios to get and fetch data via api
+    - `apiService.tsx`: 
       
 - `public/`: Contains public assets that are served as-is by the development server.
 
