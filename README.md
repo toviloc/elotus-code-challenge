@@ -6,6 +6,11 @@ The Movies is a movies app using the https://developers.themoviedb.org/3
 
 This app can help users find the Now Playing and Top Rate movies, also search movies as well  
 
+techs:
+- Typescript
+- Reactjs
+- css/scss
+
 ## Installation
 Node.js and npm installation.
 
