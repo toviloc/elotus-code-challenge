@@ -11,18 +11,29 @@
 
 Below is the directory structure of the project:
 
-- `src/`: This directory contains the main source code of the project.
-  - `components/`: Contains reusable components used throughout the application.
-  - `pages/`: Contains individual pages or views.
-  - `styles/`: Stores stylesheets, including CSS and SCSS files.
-
-- `public/`: Contains public assets that are served as-is by the development server.
-
-- `package.json`: Configuration file for Node.js dependencies.
-
-- `tsconfig.json`: TypeScript configuration file.
-
-- `README.md`: The documentation file you are currently reading.
+my-project/
+│
+├── src/
+│ ├── components/
+│ │ ├── Component1.tsx
+│ │ ├── Component2.tsx
+│ │
+│ ├── pages/
+│ │ ├── Page1.tsx
+│ │ ├── Page2.tsx
+│ │
+│ ├── styles/
+│ │ ├── styles.css
+│ │ ├── styles.scss
+│
+├── public/
+│ ├── index.html
+│ ├── favicon.ico
+│ ├── manifest.json
+│
+├── package.json
+├── tsconfig.json
+├── README.md
 
 
 ## Feature
