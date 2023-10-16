@@ -1,0 +1,42 @@
+.proceeds-modal {
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  width: 40%;
+  left: 50%;
+  height: auto;
+  max-height: 650px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0.2px 0.6px 0.5px 0.5px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .closeBtn {
+      width: min-content;
+      padding: 8px;
+      background-color: aliceblue;
+      border: 1px solid;
+      align-self: flex-end;
+      border-radius: 8px;
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(208, 240, 240);
+      }
+    }
+  }
+}
+
+.openModal:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+}

@@ -1,0 +1,17 @@
+.proceeds-snackbar {
+  padding: 12px;
+  position: fixed;
+  bottom: 12px;
+  width: 40%;
+  right: 12px;
+  height: auto;
+  background-color: rgb(246, 102, 102);
+  color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0.2px 0.6px 0.5px 0.5px;
+  z-index: 1;
+  .snackbarContent {
+    display: flex;
+    flex-direction: column;
+  }
+}
